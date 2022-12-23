@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(192, 255, 176);
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 50px auto;
+  align-items: center;
+
+  border-radius: 30px;
+}
+.classification {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+.classification h1 {
+  width: 100%;
+}
+
+.imcCalculate {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  margin: 15px 0;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+}
+.form button {
+  margin: 15px 0;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
