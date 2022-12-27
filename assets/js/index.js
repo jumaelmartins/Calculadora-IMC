@@ -18,15 +18,30 @@ function calcularImc () {
         const imcResults = (imc) => {
 
             if (!imc) {
+                results.classList.remove('blue')
+                results.classList.remove('orange')
+                results.classList.add('red')
                 return 'valor invalido'
             } else if (imc <18.5) {
-                return `seu imc é ${imc.toFixed(2)} peso abaixo do normal`
+                results.classList.remove('blue')
+                results.classList.remove('orange')
+                results.classList.add('red')
+                return `seu imc é ${imc.toFixed(2)} o seu peso está abaixo do normal`
             } else if ( imc >= 18.5 && imc <24.9) {
-                return `seu imc é ${imc.toFixed(2)} peso normal`
+                results.classList.remove('red')
+                results.classList.remove('orange')
+                results.classList.add('blue')
+                return `seu imc é ${imc.toFixed(2)} o seu está peso normal`
             } else if ( imc >= 24.9 && imc <30) {
-                return `seu imc é ${imc.toFixed(2)} está com sobrepeso`
+                results.classList.remove('blue')
+                results.classList.remove('orange')
+                results.classList.add('orange')
+                return `seu imc é ${imc.toFixed(2)} e vôce está com sobrepeso`
             } else if ( imc >30) {
-                return `seu imc é ${imc.toFixed(2)} está obeso`
+                results.classList.remove('blue')
+                results.classList.remove('orange')
+                results.classList.add('red')
+                return `seu imc é ${imc.toFixed(2)} e você está obeso`
             }
         }
 
