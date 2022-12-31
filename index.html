@@ -10,7 +10,7 @@
   <body>
     <main class="container">
       <header class="header">
-        <fieldset class="changeMode">
+        <fieldset class="hidden changeMode">
           <div>
             <input type="radio" name="radio" id="darkMode" />
             <label for="darkMode"></label>
@@ -67,11 +67,15 @@
               <label for="peso">Peso</label>
             </div>
           </div>
+          
           <div class="buttonContainer">
             <button type="submit">Calcular</button>
           </div>
         </form>
-        <div class="results"></div>
+        <div class="hidden results">
+          <input class="termometro" type="range" name="termometro" value="0" min="18" max="35">
+        </div>
+        
       </section>
     </main>
     <script src="./assets/js/index.js"></script>

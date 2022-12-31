@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: lightgray;
 }
 
 .container {
@@ -12,12 +14,20 @@ body {
   display: flex;
   flex-direction: column;
   
+
   margin: 0 auto;
   box-sizing: border-box;
   max-width: 600px;
   height: 100vh;
   align-items: center;
 }
+
+@media screen and (min-width: 668px) {
+  .container
+  {border-radius: 22px;}
+
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -48,7 +58,7 @@ body {
   width: 100%;
   display: flex;
   box-sizing: border-box;
-
+  align-items: center;
 
   flex-direction: column;
   justify-content: center;
@@ -92,13 +102,50 @@ body {
   margin-top: 32px;
 }
 
+[type='range'] {
+  appearance: none;
+  background: linear-gradient(to left, #cdf6f6, #53d0d2, #00d3ff);
+  padding: 2px;
+
+  border-radius: 22px;
+  height: 24px;
+  border: 1px gray solid;
+}
+
+[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+
+  transition: 1s;
+  border-radius: 22px;
+  background-color: lightgrey;
+  border: solid 2px white;
+}
+
+[type='range']::-webkit-slider-thumb:hover {
+  width: 32px;
+  height: 32px;
+}
+
+
 .imcCalculate button {
   border: none;
   width: 64px;
   height: 64px;
   border-radius: 50px;
   cursor: pointer;
+
+  transition: 1s;
 }
+
+.imcCalculate button:hover {
+  rotate: 360deg;
+  background-color: #00d3ff;
+  color: white;
+  font-weight: bold;
+}
+
 .imgContainer {
   display: flex;
   align-items: center;
@@ -140,27 +187,43 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 
+  width: 270px;
   margin: 16px 0;
 }
 
+
+/*
 .red {
-  background-color: red;
-  color: white;
+  color: red;
   font-weight: bold;
 }
 
 .blue {
-  background-color: blue;
-  color: white;
+  color: blue;
   font-weight: bold;
 }
 
 .orange {
-  background-color: orange;
-  color: white;
+  color: orange;
   font-weight: bold;
 }
-
+*/
 .hidden {
   display: none;
+}
+
+.termometro {
+  background: linear-gradient(to right, #00c7fa, #69d253, #fffc00, #ffbb00, #ff0000);
+  height: 20px;
+  width: 100%;
+
+  border-radius: 22px;
+}
+
+.termometro[type='range']::-webkit-slider-thumb { 
+  appearance: none; 
+  height: 18px;
+  width: 18px;
+  border-radius: 22px;
+  opacity: .7;
 }
