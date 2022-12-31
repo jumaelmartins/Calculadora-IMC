@@ -9,36 +9,69 @@
   </head>
   <body>
     <main class="container">
-      <section class="classification">
-        <h1>Calculadora IMC</h1>
-        <article>
-          <h2>IMC (kg/m2)</h2>
-          <p>Menor que 18,5</p>
-          <p>18,5 a 24,9</p>
-          <p>25 a 29,9</p>
-          <p>30 a 34,9</p>
-          <p>35 a 39,9</p>
-        </article>
-        <article>
-          <h2>Classificação</h2>
-          <p>Magreza</p>
-          <p>Normal</p>
-          <p>Sobrepeso</p>
-          <p>Obesidade grau I</p>
-          <p>Obesidade grau II</p>
-        </article>
-      </section>
+      <header class="header">
+        <fieldset class="changeMode">
+          <div>
+            <input type="radio" name="radio" id="darkMode" />
+            <label for="darkMode"></label>
+          </div>
+          <div>
+            <input type="radio" name="radio" id="lightMode" />
+            <label for="lightMode"></label>
+          </div>
+        </fieldset>
+        <h1 class="title">Calculadora IMC</h1>
+      </header>
+      <article></article>
       <section class="imcCalculate">
-        <h2>Calcule Seu IMC</h2>
         <form action="" class="form">
-          <label>Altura</label>
-          <input type="text" class="altura" placeholder="informe sua altura" />
-          <label>Peso</label>
-          <input type="text" class="peso" placeholder="informe seu peso" />
-          <button type="submit">Calcular</button>
+          <div class="inputContainer">
+            <div class="inputBar">
+              <div class="inpt">
+                <input
+                  class="alturaInput"
+                  type="range"
+                  class="altura"
+                  name="altura"
+                  value="0"
+                  min="0"
+                  max="220"
+                />
+              </div>
+
+              <p id="alturaValue">0</p>
+              <label for="altura">Altura</label>
+            </div>
+            <div class="imgContainer">
+              <img
+                width="128px"
+                height="128px"
+                src="https://st3.depositphotos.com/2419757/16548/v/450/depositphotos_165489626-stock-illustration-cartoon-full-length-man-isolated.jpg"
+                alt="peopleIllustration"
+              />
+            </div>
+
+            <div class="inputBar">
+              <div class="inpt">
+                <input
+                  class="pesoInput"
+                  type="range"
+                  class="peso"
+                  name="peso"
+                  min="0"
+                  value="0"
+                  max="200"
+                />
+              </div>
+              <p id="pesoValue">0</p>
+              <label for="peso">Peso</label>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button type="submit">Calcular</button>
+          </div>
         </form>
-        <div class="results">
-        </div>
+        <div class="results"></div>
       </section>
     </main>
     <script src="./assets/js/index.js"></script>

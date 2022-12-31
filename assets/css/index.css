@@ -5,72 +5,141 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(192, 255, 176);
 }
 
 .container {
   background-color: white;
   display: flex;
   flex-direction: column;
+  
+  margin: 0 auto;
+  box-sizing: border-box;
   max-width: 600px;
-  margin: 50px auto;
+  height: 100vh;
   align-items: center;
-
-  border-radius: 30px;
 }
-.classification {
+.header {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  text-align: center;
   justify-content: space-between;
   width: 100%;
   padding: 0 20px;
 }
-.classification h1 {
-  width: 100%;
+
+
+.changeMode {
+  justify-content: space-around;
+  border-radius: 22px;
+  background-color: lightslategrey;
+  display: flex;
+  
+  
+  align-self: flex-end;
+  margin: 20px 0;
+  width: 80px;
+  height: 37px;
 }
 
 .imcCalculate {
   width: 100%;
-  padding: 0 20px;
   display: flex;
+  box-sizing: border-box;
+
+
   flex-direction: column;
+  justify-content: center;
 }
+
 .form {
+  margin-top: 72px;
   width: 100%;
   display: flex;
   flex-direction: column;
 
+  align-items: center;
+  justify-content: center;
+  height: 300px;
   font-size: 20px;
 }
 
-.form input {
-  margin: 15px 0;
-  height: 40px;
-  border-radius: 20px;
+.inputContainer {
+  display: flex;
+  box-sizing: border-box;
+  height: 300px;
   
-  padding: 16px;
-  font-size: 20px;
-  outline: none;
+  justify-content: space-around;
+  width: 100%;
 }
-.form button {
-  margin: 15px 0;
-  height: 38px;
-  border-radius: 20px;
 
-  font-size: 20px;
-  text-align: center;
+.inputContainer label {
+  justify-content: center;
+  align-items: center;
+  
+  margin: 2px;
+  display: flex;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+}
+
+.inputContainer p {
+  align-self: center;
+  justify-self: flex-end;
+  margin-top: 32px;
+}
+
+.imcCalculate button {
+  border: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
   cursor: pointer;
 }
+.imgContainer {
+  display: flex;
+  align-items: center;
 
-.form button:hover {
-  opacity: .7;
 }
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: 12px;
+}
+
+.inpt {
+  margin: 2px;
+  rotate: -90deg;
+  justify-content: flex-start;
+  display: flex;
+  
+}
+
+.inputBar {
+  width: 60px;
+  height: 200px;
+  flex-direction: column;
+
+  text-align: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: flex;
+ 
+}
+
 
 .results {
   text-align: center;
   font-size: 20px;
   text-transform: uppercase;
-  
+
   margin: 16px 0;
 }
 
@@ -90,4 +159,8 @@ body {
   background-color: orange;
   color: white;
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
