@@ -51,6 +51,7 @@ function calcularImc() {
     results = results.appendChild(p);
     } catch { console.log('algo errado não está certo')}
 
+    inputTermometro.addEventListener('input', e => inputTermometro.value = Math.round(imc))
   });
 }
 
