@@ -6,11 +6,11 @@ function calcularImc() {
   let inputTermometro = document.querySelector(".termometro");
 
   alturaInput.addEventListener("input", (e) => {
-    return (alturaValue.innerHTML = e.target.value / 100).toFixed(2);
+    return (alturaValue.innerHTML = Number(e.target.value / 100).toFixed(2));
   });
 
   pesoInput.addEventListener("input", (e) => {
-    return (pesoValue.innerHTML = parseFloat(e.target.value));
+    return (pesoValue.innerHTML = Number(e.target.value));
   });
 
   const form = document.querySelector(".form");
@@ -46,6 +46,7 @@ function calcularImc() {
     p.innerHTML = imcResults(imc)
 
     results.classList.remove('hidden')
+    inputTermometro.classList.remove('hidden')
 
     try {
     results = results.appendChild(p);
@@ -53,6 +54,13 @@ function calcularImc() {
 
     inputTermometro.addEventListener('input', e => inputTermometro.value = Math.round(imc))
   });
+
+  form.addEventListener('reset', e => {
+    results.classList.add('hidden')
+    inputTermometro.classList .add('hidden')
+    alturaValue.innerHTML = 0
+    pesoValue.innerHTML = 0
+  })
 }
 
 calcularImc();
